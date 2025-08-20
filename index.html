@@ -1,12 +1,259 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>저는 박자바입니다</title>
+    <title>변영인 | 클라우드 엔지니어 포트폴리오</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap");
+
+      :root {
+        --main-color: #3498db;
+        --bg-color: #f4f7f6;
+        --text-color: #333;
+        --sub-text-color: #555;
+        --card-bg-color: #ffffff;
+        --border-radius: 8px;
+        --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 800px;
+        background-color: var(--card-bg-color);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        padding: 2.5rem;
+        text-align: center;
+      }
+
+      .profile-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      .profile-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #ccc; /* 나중에 프로필 이미지 URL로 변경 */
+        background-image: url("https://via.placeholder.com/120"); /* 실제 이미지 URL로 변경하세요 */
+        background-size: cover;
+        background-position: center;
+        border: 4px solid var(--main-color);
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+        color: var(--sub-text-color);
+        margin-bottom: 1.5rem;
+      }
+
+      .social-links {
+        margin-bottom: 2rem;
+      }
+
+      .social-links a {
+        color: var(--main-color);
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .social-links a:hover {
+        color: #2980b9;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--main-color);
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--main-color);
+        display: inline-block;
+      }
+
+      .section-content {
+        margin-bottom: 2rem;
+      }
+
+      .intro p {
+        font-size: 1rem;
+        color: var(--sub-text-color);
+        margin-bottom: 1rem;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .skill-item {
+        background-color: var(--bg-color);
+        border-radius: 6px;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--sub-text-color);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .skill-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-item {
+        border: 1px solid #e0e0e0;
+        border-radius: var(--border-radius);
+        padding: 1.5rem;
+        text-align: left;
+        margin-bottom: 1rem;
+      }
+
+      .project-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-color);
+      }
+
+      .project-item p {
+        font-size: 0.95rem;
+        color: var(--sub-text-color);
+      }
+
+      .contact-links {
+        margin-top: 2rem;
+        font-size: 1rem;
+      }
+
+      .contact-links a {
+        color: var(--main-color);
+        text-decoration: none;
+        margin: 0 0.5rem;
+        font-weight: 500;
+      }
+
+      .contact-links a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 1rem;
+        }
+        .container {
+          padding: 1.5rem;
+        }
+        h1 {
+          font-size: 1.7rem;
+        }
+        .subtitle {
+          font-size: 1rem;
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
-    <h1>잘 부탁드립니다!</h1>
-    <p>좋아하는 건 <string>파이썬</string>입니다</p>
+    <div class="container">
+      <header class="profile-section">
+        <div class="profile-image"></div>
+        <h1>변영인 (Byeon Yeongin)</h1>
+        <p class="subtitle">0년차 클라우드 엔지니어 지망생</p>
+        <div class="social-links">
+          <a
+            href="https://github.com/your-username"
+            target="_blank"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </header>
+
+      <section class="intro section-content">
+        <h2 class="section-title">자기소개</h2>
+        <p>
+          안녕하세요. 생산적인 코드를 지향하는 클라우드 엔지니어 지망생
+          변영인입니다.
+        </p>
+        <p>
+          단순히 동작하는 것을 넘어, 효율적이고 확장 가능한 시스템을 구축하는 데
+          열정을 가지고 있습니다. 현재 Java, SQL, Spring, Docker, AWS 등
+          클라우드 기술 스택을 학습하며 이론과 실무를 겸비한 엔지니어로 성장하고
+          있습니다.
+        </p>
+      </section>
+
+      <section class="skills section-content">
+        <h2 class="section-title">기술 스택 (예정)</h2>
+        <div class="skills-grid">
+          <span class="skill-item">Java</span>
+          <span class="skill-item">SQL</span>
+          <span class="skill-item">Spring Framework</span>
+          <span class="skill-item">Docker</span>
+          <span class="skill-item">AWS</span>
+          <span class="skill-item">Git/GitHub</span>
+        </div>
+      </section>
+
+      <section class="projects section-content">
+        <h2 class="section-title">진행 중인 프로젝트</h2>
+        <div class="project-item">
+          <h3>클라우드 기반 웹 서비스 구축 프로젝트</h3>
+          <p>
+            Java와 Spring을 활용하여 RESTful API를 개발하고, Docker 컨테이너를
+            사용해 애플리케이션을 패키징하는 경험을 쌓고 있습니다. AWS를 통해
+            배포 자동화를 목표로 공부하고 있습니다.
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <div class="contact-links">
+          <p>
+            이메일:
+            <a href="mailto:your-email@example.com">your-email@example.com</a>
+          </p>
+        </div>
+        <p style="margin-top: 1rem; color: #aaa">
+          &copy; 2024. Byeon Yeongin. All rights reserved.
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
